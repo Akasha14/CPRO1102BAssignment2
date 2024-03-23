@@ -1,3 +1,4 @@
+<!-------Question 2 First------->
 <!DOCTYPE html>
 <html>
 
@@ -6,28 +7,38 @@
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Vecta corp</title>
+        <title>Meown</title>
 
+        <style>
+            h1 {
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+        </style>
+        
+        <!-- Themeroller used for css -->
+        <link rel="stylesheet" href="themes/blueTheme.min.css" />
+        <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+
+        <!-- jQuery Version, JS, and css -->
         <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
         <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
         <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
-
-        <link rel="stylesheet" href="themes/myTheme.min.css" />
-
-        <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
     </head>
 
     <body>
-        <!-- Home -->
-        <div class="pg" data-role="page" id="home">
+        <!-- Blog Page -->
+        <div class="pg" data-role="page" id="blog">
 
             <header data-role="header">
-                <h1>Vecta</h1>
 
+                <h1 style="padding: 20px; font-size: 350%">
+                    Meown
+                </h1>
+                <!-- Page links -->
                 <div data-role="navbar">
                     <ul>
-                        <li><a href="#contactus" data-icon="grid" class="ui-btn-active" data-theme="b">Contact Us</a></li>
-                        <li><a href="#management" data-icon="grid" data-theme="b">Management</a></li>
+                        <li><a href="#contactMe" data-icon="grid" class="ui-btn-active" data-theme="b">Contact Me!</a></li>
+                        <li><a href="#effects" data-icon="grid" data-theme="b">Effects Page!</a></li>
                     </ul>
                 </div>
 
@@ -55,26 +66,40 @@
 
         </div>
 
-        <!-- Contact Us -->
-        <div class="pg" data-role="page" id="contactus">
+        <!-- Contact Me Page -->
+        <div class="pg" data-role="page" id="contactMe">
+
             <header data-role="header">
-                <h1>Vecta Contacts</h1>
+
+                <h1 style="padding: 20px; font-size: 250%">
+                    Contact Me
+                </h1>
+
                 <div data-role="navbar">
                     <ul>
-                        <li><a href="#home" data-icon="home" data-theme="b">Home</a></li>
-                        <li><a href="#management" data-icon="grid" data-theme="b">Management</a></li>
+                        <li><a href="#blog" data-icon="home" data-theme="b">Back to Blog</a></li>
+                        <li><a href="#effects" data-icon="grid" data-theme="b">Effects Page!</a></li>
                     </ul>
                 </div>
+
             </header>
 
             <section class="ui-content" role="main">
-                <h4>Please contact us by phone, email... whatever works best for you.</h4>
+
+                <h4>If you have any feedback, questions, or concerns, feel free to contact me using any of the following:</h4>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
                 <a href="#" data-role="button" data-rel="back" data-theme="b">Back to home</a>
             </section>
             <footer data-role="footer"><h4>&copy; 2023</h4></footer>
         </div>
 
-        <!-- Management -->
+        <!-------Question 1------->
+
+        <!-- Effects Page -->
         <div class="pg" data-role="page" id="management">
             <header data-role="header">
                 <h1>Vecta</h1>
