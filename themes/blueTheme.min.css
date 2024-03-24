@@ -19,43 +19,10 @@
 	white-space: normal !important;
 }
 
-#draggables {
-	margin: 20px auto;
-	width: fit-content;
-	height: fit-content;
-	border: 2px solid #ccc;
-	padding: 10px;
-	display: flex;
-	flex-wrap: wrap;
-}
-
-#draggables > div {
-	width: 80px;
-	height: 80px;
-	border: 2px solid #666;
-	background-color: #f0f0f0;
+.effectTitle {
 	text-align: center;
-	line-height: 80px;
-	margin: 10px;
-	cursor: pointer;
-}
-
-#draggables > div > p {
-	line-height: 25px;
-}
-
-#draggables > .trashcan {
-	width: 100px;
-	height: 100px;
-	border: 2px dashed #333;
-	background-color: #eee;
-	cursor: pointer;
-	text-align: center;
-	line-height: 100px;
-}
-
-.semitransparent {
-	opacity: 0.5;
+	border-top: 2px solid;
+	padding-top: 2rem;
 }
 
 .jQTitle {
@@ -63,16 +30,105 @@
 	border-radius: 10px;
 	width: fit-content;
 	padding: 1rem;
-	animation: colorchange 10s infinite; 
+	animation: colorchange 7s infinite; /* Color animation */
 }
 
+.jQTitle2 {
+	border: 1px solid;
+	border-radius: 10px;
+	width: fit-content;
+	padding: 1rem;
+	margin-top: 4rem;
+	animation: colorchange 7s infinite; /* Color animation */
+}
+
+.customLine {
+	margin-top: 2rem;
+	border-color: #3386cb;
+	border-width: 15px;
+}
+
+/* Color animation */
 @keyframes colorchange {
 	0%   {background-color: #3386cb;}
 	25%  {background-color: rgb(218, 218, 105);}
 	50%  {background-color: rgb(196, 86, 86)}
 	75%  {background-color: rgb(87, 177, 87);}
 	100% {background-color: #3386cb;}
-  }
+}
+
+/* Draggable/Droppable CSS */
+#draggableContainer {
+	width: fit-content;
+	height: fit-content;
+	border: 3px solid;
+	padding: 10px;
+	display: flex;
+	flex-wrap: wrap;
+	margin: auto;
+}
+
+#draggableContainer > div {
+	width: 100px;
+	height: 100px;
+	border: 2px solid #7d7272;
+	background-color: white;
+	text-align: center;
+	line-height: 80px;
+	margin: 7px;
+	cursor: pointer;
+}
+
+#draggableContainer > div > p {
+	line-height: 25px;
+}
+
+#draggableContainer > .trashcan {
+	width: 150px;
+	height: 150px;
+	border: 2px dashed #7d7272;
+	background-color: white;
+}
+
+/* Resizable CSS */
+#resizable { 
+	width: 150px; 
+	height: 75px; 
+	border: 2px dashed;
+	margin: auto;
+	margin-bottom: 4rem;
+	padding: 10px;
+	text-align: center;
+}
+
+/* Selectable CSS */
+#selectable .ui-selecting { 
+	 background: #87bef1; /* Color while clicking */
+}
+
+#selectable .ui-selected { 
+	background: #3386cb; /* Color when clicked */
+	color: white; 
+}
+
+#selectable { 
+	list-style-type: none; /* Rid of list dots */
+	margin: auto;
+	width: 35%; 
+}
+
+#selectable li { 
+	border: 2px solid #7d7272;
+	margin-bottom: 15px;
+	padding: 15px; 
+	text-align: center;
+	cursor: pointer;
+}
+
+.accordionText {
+    height: 200px; /* Set the desired height */
+}
+
 
 /* Globals */
 /* Font
