@@ -21,7 +21,6 @@
         <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
         <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-        <script id="DragDropTouch" src="https://bernardo-castilho.github.io/DragDropTouch/DragDropTouch.js"></script>
         <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
     </head>
 
@@ -119,23 +118,28 @@
 
             <section class="ui-content" role="main">
 
-                <h4>This is the effects page!</h4>
+                <center>
+                    <h1 class="jQTitle"><u>jQuery UI Effects</u></h1>
+                </center>    
 
-                <h2>jQuery UI Interactions</h2>
+                <section style="margin-top: 4rem;">
 
-                <section>
+                    <h2>a) Draggable/Droppable</h2>
+
                     <div id="draggables">
-                      <div id="d1" class="draggable"><div>A</div></div>
-                      <div id="d2" class="draggable"><div>B</div></div>
-                      <div id="d3" class="draggable"><div>C</div></div>
 
-                      <div class="trashcan semitransparent">Trashcan</div>
-                    </div>
+                      <div id="d1" class="draggable"><p>Throw Me Away!</p></div>
+                      <div id="d2" class="draggable"><p>Me <br> Too!</p></div>
+                      <div id="d3" class="draggable"><p>Me <br> Three!</p></div>
+
+                      <div class="trashcan semitransparent"><img src="themes\images\TrashCan.jpg" alt="Trashcan" width="100px"></div>
+
+                    </div>    
                     
                 </section>
 
-            <footer data-role="footer"><h4>&copy; 2023</h4></footer>
-
+                <footer data-role="footer"><h4>&copy; 2023</h4></footer>
+            </section>
         </div>
 
         <script>
