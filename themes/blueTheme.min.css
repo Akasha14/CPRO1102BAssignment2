@@ -21,7 +21,7 @@
 
 #draggables {
 	margin: 20px auto;
-	width: 400px;
+	width: fit-content;
 	height: 250px;
 	border: 2px solid #ccc;
 	padding: 10px;
