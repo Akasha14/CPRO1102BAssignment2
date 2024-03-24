@@ -10,7 +10,39 @@
         <title>Meown</title>
 
         <style>
-        
+            #draggables {
+                margin: 20px auto;
+                width: 400px;
+                height: 250px;
+                border: 2px solid #ccc;
+                padding: 10px;
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            #draggables > div {
+                width: 80px;
+                height: 80px;
+                border: 2px solid #666;
+                background-color: #f0f0f0;
+                text-align: center;
+                line-height: 80px;
+                margin: 10px;
+            }
+
+            #draggables > .trashcan {
+                width: 100px;
+                height: 100px;
+                border: 2px dashed #333;
+                background-color: #eee;
+                
+                text-align: center;
+                line-height: 100px;
+            }
+
+            .semitransparent {
+                opacity: 0.5;
+            }
         </style>
         
         <!-- Themeroller used for css -->
@@ -19,6 +51,7 @@
 
         <!-- jQuery Version, JS, and css -->
         <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
         <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
         <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
     </head>
@@ -95,7 +128,7 @@
             <footer data-role="footer"><h4>&copy; 2023</h4></footer>
         </div>
 
-        <!-------Question 1------->
+        <!-------Question 1-------------------------------------------------------------------------------->
 
         <!-- Effects Page -->
         <div class="pg" data-role="page" id="effects">
@@ -119,12 +152,39 @@
 
                 <h4>This is the effects page!</h4>
 
-                <a href="#blog" data-role="button" data-rel="back" data-theme="b">Back to Blog</a>
+                <h2>jQuery UI Interactions</h2>
 
-            </section>
+                <section>
+                    <div id="draggables">
+                      <div id="d1" class="draggable"><div>A</div></div>
+                      <div id="d2" class="draggable"><div>B</div></div>
+                      <div id="d3" class="draggable"><div>C</div></div>
+
+                      <div class="trashcan semitransparent">Trashcan</div>
+                    </div>
+                    
+                </section>
 
             <footer data-role="footer"><h4>&copy; 2023</h4></footer>
 
         </div>
+
+        <script>
+            $(function() {
+                $(".draggable").draggable({
+                    revert: "invalid",
+                    cursor: "move",
+                    zIndex: 1000
+                });
+
+                $(".trashcan").droppable({
+                    accept: "#draggables > div",
+                    drop: function(event, ui) {
+                        ui.draggable.remove();
+                    }
+                });
+            });
+
+        </script>
     </body>
 </html>
