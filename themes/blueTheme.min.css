@@ -37,6 +37,7 @@
 	text-align: center;
 	line-height: 80px;
 	margin: 10px;
+	cursor: pointer;
 }
 
 #draggables > .trashcan {
@@ -44,7 +45,7 @@
 	height: 100px;
 	border: 2px dashed #333;
 	background-color: #eee;
-	
+	cursor: pointer;
 	text-align: center;
 	line-height: 100px;
 }
